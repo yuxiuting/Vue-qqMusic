@@ -1,0 +1,148 @@
+
+.intr1{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #244664;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    color:white;
+    h1{
+        font-size: 4rem;
+        font-weight: 400;
+        margin-top: 2rem;
+        margin-left: 40%;
+    }
+    h2{
+        font-size: 3rem;
+        font-weight: 400;
+        margin-top: 1rem;
+        margin-left: 2rem;
+    }
+    p{
+        font-size: 2.5rem;
+        margin-left: 20rem;
+    }
+    h3{
+        font-size: 2.7rem;
+        margin-left: 5rem;
+        margin-top: 1.5rem;
+    }
+    .get{
+        font-size: 2.2rem;
+        margin-top: 1rem;
+        margin-left: 14rem;
+    }
+    .get1{
+        font-size: 2.6rem;
+        margin-top: 1rem;
+        margin-left: 14rem;
+    }
+}
+.intr1.fold-enter-active,
+.intr1.fold-leave-active {
+  transition: all .5s;
+}
+.intr1.fold-enter,
+.intr1.fold-leave-active {
+  transform: translate3d(0, -100%, 0);
+}
+.radio1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.05rem solid #CACACA;
+    padding-bottom: .25rem;
+    .title{
+        margin-top: 2rem;
+        margin-left: 2rem;
+        p{
+            font-size: 2.3rem;
+            font-weight: 400;
+            font-family:NSimSun;
+        }
+        small{
+            font-size: 1.8rem;
+            font-weight: 100;
+            color:#CACACA;
+        }
+    }
+    img{
+        width: 10rem;
+        height: 10rem;
+    }
+}
+.radio2{
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    .title2{
+        margin-left: 2rem;
+        p{
+            font-size: 2.3rem;
+            font-weight: 400;
+            font-family:SSimSun;
+        }
+        small{
+            font-size: 1.9rem;
+            font-weight: 100;
+            color:#CACACA;
+        }
+    }
+    img{
+        width: 10rem;
+        height: 10rem;
+    }
+}
+.songlist{
+    width: 100%;
+    margin-top: 2rem;
+    border-bottom: 0.05rem solid #CACACA;
+    padding-bottom: 3rem;
+    .title{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+}
+.blank1{
+    width: 100%;
+    height: 1.6rem;
+    // background-color: #CECECE;
+    // opacity: 0.4;
+    background-color: #EBEBEB;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+.list{
+    display: flex;
+    align-items: center;
+    img{
+       width: 10rem;
+       height: 10rem;
+       vertical-align: middle;
+    }
+    .number{
+        margin-left: 2rem;
+        p{
+            font-size: 2.3rem;
+            font-weight: 400;
+            font-family:NSimSun;
+        }
+        small{
+            font-size: 1.8rem;
+            font-weight: 100;
+            color:#CACACA;
+        }
+    }
+}
+.blank2{
+    width: 100%;
+    height: 20rem;
+    // background-color: #CECECE;
+    // opacity: 0.4;
+    background-color: #EBEBEB;
+    margin-bottom: 2rem;
+}

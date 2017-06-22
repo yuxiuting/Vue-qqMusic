@@ -1,0 +1,20 @@
+.black{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #31C37C;
+    z-index: 9999;
+    color: white;
+    font-size: 6rem;
+    text-align: center;
+}
+.black.fold-enter-active,
+.black.fold-leave-active {
+  transition: all 0.5s;
+}
+.black.fold-enter,
+.black.fold-leave-active {
+  transform: translate3d(-100%, 0, 0);
+}
