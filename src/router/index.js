@@ -8,7 +8,9 @@ import avatar from '@/components/avatar.vue'
 import search from '@/components/search.vue'
 import total from '@/components/total.vue'
 import musiclist from '@/components/musiclist.vue'
-
+import like from '@/components/like.vue'
+import play from '@/components/play.vue'
+import download from '@/components/download.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -40,6 +42,18 @@ export default new Router({
     {
       path: '/musiclist',
       component: musiclist
+    },
+    {
+        path: '/like',
+        component: like
+    },
+    {
+        path: '/play',
+        component: play
+    },
+    {
+        path: '/download',
+        component: download
     }
   ]
 })

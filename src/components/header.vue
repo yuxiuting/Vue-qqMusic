@@ -41,29 +41,26 @@
                 <router-link to="/total">
                 <img src="../public/icons/yinfu.png" alt="">
                 <p>全部歌曲</p>
-                <small>55</small>
                 </router-link> 
             </div>
             <div class="t-intr-songs1">
+                <router-link to="/download">
                 <img src="../public/icons/download.png" alt="">
                 <p>下载歌曲</p>
-                <small>55</small>
+                </router-link>
             </div>
-            
             <div class="t-intr-songs1">
                 <router-link to="/musiclist">
                 <img src="../public/icons/zuijin.png" alt="">
                 <p>最近播放</p>
-                <small>55</small>
                 </router-link>
-            </div>
-            
+            </div>       
         </div>
         <div class="b-intr-songs">
             <div class="b-intr-songs1">
                 <img src="../public/icons/heart.png" alt="">
                 <p>我喜欢</p>
-                <small>55</small>
+                <small></small>
             </div>
             <div class="b-intr-songs1">
                 <img src="../public/icons/mv.png" alt="">
@@ -87,7 +84,7 @@
         </div>
       </div>
       <div class="radio2">
-        <img src="../public/icons/run.jpg" alt="">
+        <img src="../public/icons/run1.jpg" alt="">
         <!--<img src="" alt="">-->
         <div class="title2">
         <p>NIKE跑步电台</p>
@@ -99,20 +96,22 @@
   <div class="songlist">
       <p class="title">我 的 歌 单 1</p>
   </div>
-  <div class="list">
+  <router-link to="/like">
+  <div class="list" >
       <img src="../public/icons/jay1.jpg" alt="">
       <div class="number">
           <p>哦耶。的2015年特别纪念</p>
-          <small>46首</small>
+          <small></small>
       </div>
   </div>
     <div class="list">
       <img src="../public/icons/jay1.jpg" alt="">
       <div class="number">
           <p>哦耶。喜欢的歌</p>
-          <small>46首</small>
+          <small></small>
       </div>
   </div>
+  </router-link>
   <div class="blank2">
       
   </div>
@@ -139,6 +138,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../assets/style/header.scss';
+
 </style>

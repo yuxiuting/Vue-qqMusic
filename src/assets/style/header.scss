@@ -1,4 +1,8 @@
-
+*{
+    font-family: Tahoma;
+    font-weight: normal;
+    text-decoration: none;
+}
 .intr1{
     position: fixed;
     top: 0;
@@ -62,7 +66,7 @@
         p{
             font-size: 2.3rem;
             font-weight: 400;
-            font-family:NSimSun;
+            // font-family:NSimSun;
         }
         small{
             font-size: 1.8rem;
@@ -84,7 +88,7 @@
         p{
             font-size: 2.3rem;
             font-weight: 400;
-            font-family:SSimSun;
+            // font-family:SSimSun;
         }
         small{
             font-size: 1.9rem;
@@ -117,6 +121,7 @@
     margin-top: 3rem;
 }
 .list{
+    color: #000000;
     display: flex;
     align-items: center;
     img{
@@ -129,7 +134,7 @@
         p{
             font-size: 2.3rem;
             font-weight: 400;
-            font-family:NSimSun;
+            // font-family:NSimSun;
         }
         small{
             font-size: 1.8rem;

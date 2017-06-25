@@ -23,9 +23,16 @@ const store = new Vuex.Store({
     state: {
       musiclist: [],
       showFooter: true,
+      avatarShow: true,
+      avatar1Show: false,
+      rotImgShow: true,
+      rotImg1Show: false,
       isPlay: false,
-      src: "https://m8.music.126.net/20170621113735/8f8a6ebdfa57e06727105fd31ecd6b00/ymusic/ef85/56ab/1f05/ac15bd3cebe8a1ed0855c277c1f9e9d5.mp3",
-      name: "祝我生日快乐",
+      lyrics: "",
+      src: "https://m7.music.126.net/20170625114850/492d7b90d9726eec79445875011982c8/ymusic/dfea/389c/ac04/70c5db84ea78dcc8eb727124acec52a0.mp3",
+      name: "When I Was Your Man",
+      singerName:"Bruno Mars",
+      picUrl: "https://p1.music.126.net/BgIHV6Bdc1fOL8exoLAHIg==/1694347418408441.jpg"
     }
 })
 /* eslint-disable no-new */

@@ -12,11 +12,11 @@
         </div>
         <div class="wrap">
         <div class="musiclist">
-          <div class="music" @click="play(data.id, data.name)" v-for="data in musiclist" key="data.id" :data-id="data.id">
+          <div class="music" @click="play(data.id, data.name,data.al.picUrl,data.al.name,data.ar[0].name)" v-for="data in musiclist" key="data.id" :data-id="data.id">
             <router-link to="/">
               <div class="music-name">{{data.name}}</div>
               <div class="music-info">
-                {{data.ar.name}} - {{data.al.name}}
+                 {{data.al.name}}
               </div>
               <div class="music-info" v-show="data.alia[0]">{{data.alia[0]}}</div>
             </router-link>
@@ -63,7 +63,8 @@ export default {
         if(200 === res.data.code) {
           this.util.closeIndicator()
           this.musiclist = res.data.result.songs 
-          console.log('名字'+ res.data.result.songs)
+          // console.log(data.results)
+          // console.log('名字'+ res.data.result.songs)
           // this.$store.state.name = res.data.result.songs.name
           // console.log(res.data) 
             let data = {
@@ -73,14 +74,34 @@ export default {
         }
       })
     },
-    play (id, name) {
-       
+    play (id, name,picUrl,alName,arName) {
+        this.$store.state.picUrl = picUrl
+        this.$store.state.avatarShow = false
+        this.$store.state.avatar1Show = true
         this.$store.state.name = name
+        this.$store.state.singerName = arName
         this.$store.state.showFooter = true
+        this.$store.state.rotImg1Show = true
+        this.$store.state.rotImgShow = false
+        let data ={
+          id,
+          name,
+          picUrl,
+          alName,
+          arName
+        }
+        this.$store.state.musiclist.unshift(data)
+        // console.log(this.$store.state.musiclist)
         this.axios.post("https://api.imjad.cn/cloudmusic/?type=song&id=" + id +"&br=128000").then((res)=>{
         if(200 === res.data.code){
         this.$store.state.src = res.data.data[0].url
         // console.log(res)
+      }
+      })
+      this.axios.post("https://api.imjad.cn/cloudmusic/?type=lyric&id="+ id +"&br=128000").then((res)=>{
+        if(200 === res.data.code){
+        this.$store.state.lyrics = res.data.lrc.lyric
+        console.log(res.data.lrc.lyric)
         }
       })
       this.$store.state.isPlay = true
@@ -110,8 +131,13 @@ export default {
         margin: 0;
         padding: 0;
         text-decoration: none;
+        font-family: Tahoma;
     }
     .bg{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
         width: 100%;
         height: 7rem;
         background-color: #31C37C;
